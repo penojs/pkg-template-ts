@@ -2,7 +2,6 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import babel from '@rollup/plugin-babel'
 import ts from '@wessberg/rollup-plugin-ts'
-import { uglify } from 'rollup-plugin-uglify'
 import { terser } from 'rollup-plugin-terser'
 import replace from '@rollup/plugin-replace'
 import pkg from './package.json'
@@ -33,7 +32,7 @@ export default {
             ...commonOutput,
             file: 'dist/index.min.js',
             sourcemap: true,
-            plugins: [uglify(), terser()],
+            plugins: [terser()],
         },
         {
             ...commonOutput,
