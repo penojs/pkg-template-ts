@@ -9,11 +9,11 @@
         "dist"
     ],
     "scripts": {
-        "build": "npm run lint && rimraf dist && rollup -c && node scripts/bundle-size.js",
+        "build": "npm run lint && npm test && rimraf dist && rollup -c && node scripts/bundle-size.js",
         "lint": "eslint src --ext .ts,.js --cache",
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
         "version": "npm run build && npm run changelog && npm run authors && git add --all",
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "jest",
         "prepare": "husky install"
     },
     "author": "advancedcat <wshx1938@gmail.com>",
@@ -41,6 +41,7 @@
         "glob": "^7.1.7",
         "gzip-size": "^6.0.0",
         "husky": "^6.0.0",
+        "jest": "^27.0.1",
         "prettier": "^2.3.0",
         "pretty-quick": "^3.1.0",
         "rimraf": "^3.0.2",
