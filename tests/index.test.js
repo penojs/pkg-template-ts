@@ -1,5 +1,5 @@
-import { sum } from '../src'
+import { foo } from '../src'
 
-test('1 + 1 = 2', () => {
-    expect(sum(1, 1)).toBe(2)
+test('Hello World', () => {
+    expect(foo()).toBe('Hello World')
 })

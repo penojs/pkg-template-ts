@@ -1,13 +1,13 @@
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import babel from '@rollup/plugin-babel'
-import ts from '@wessberg/rollup-plugin-ts'
+import ts from 'rollup-plugin-ts'
 import { terser } from 'rollup-plugin-terser'
 import replace from '@rollup/plugin-replace'
 import pkg from './package.json'
 
 const banner = `/*!
-* ${pkg.name}.js v${pkg.version}
+* ${pkg.name} v${pkg.version}
 * @${pkg.author}
 * Released under the ${pkg.license.toUpperCase()} License.
 */`
