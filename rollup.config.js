@@ -4,6 +4,7 @@ import babel from '@rollup/plugin-babel'
 import ts from 'rollup-plugin-ts'
 import { terser } from 'rollup-plugin-terser'
 import replace from '@rollup/plugin-replace'
+import assert from 'assert'
 import pkg from './package.json'
 
 const banner = `/*!
@@ -12,8 +13,9 @@ const banner = `/*!
 * Released under the ${pkg.license.toUpperCase()} License.
 */`
 
-// 在这里指定抛出去的包名称
-const BundleName = pkg.name.split('-').join('_')
+// 在这里指定挂载全局的包名称
+const BundleName = ''
+assert.ok(BundleName, '请输入正确的包名称!')
 const commonOutput = {
     name: BundleName,
     format: 'umd',

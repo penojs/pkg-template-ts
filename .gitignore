@@ -2,7 +2,7 @@ node_modules
 dist
 .eslintcache
 
-.vscode
+temp
 
 yarn.lock
 package-lock.json
